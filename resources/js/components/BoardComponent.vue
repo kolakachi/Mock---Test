@@ -1,6 +1,11 @@
 <template>
+<div>
+    <div class="dump-container">   
+        <a class="add-column-btn" :href="url.dumpSQL">Dump SQL</a>
+    </div>
+    <div class="container">
+    
 
-<div class="container">
     <div class="column-item" v-for="(column, index) in columns" :key="index">
         <div class="column-header">
             <textarea class="" 
@@ -99,6 +104,8 @@
     </modal>
     
 </div>
+</div>
+
 </template>
 <style lang="scss" scoped>
    @import '../../sass/app.scss'
@@ -114,9 +121,11 @@ import axios from 'axios';
             let columns = document.getElementById("columns").value;
             let boardId = document.getElementById("boardId").value;
             let storeUrl = document.getElementById("store-url").value;
+            let dumpSQL = document.getElementById("dump-sql-url").value;
             this.columns = JSON.parse(columns);
             this.boardId = boardId;
             this.url.store = storeUrl;
+            this.url.dumpSQL = dumpSQL;
         },
         components: {
             draggable
@@ -156,7 +165,8 @@ import axios from 'axios';
                     description: ''
                 },
                 url : {
-                    store : ``
+                    store : ``,
+                    dumpSQL:``
                 }
             
             };

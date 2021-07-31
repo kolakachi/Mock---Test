@@ -20,7 +20,7 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 Vue.use(VModal);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('board-component', require('./components/BoardComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

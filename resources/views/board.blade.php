@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="margin: 0px;">
+<body style="margin: 0px; background: #6c757d;">
     <div id="app">
         @csrf
-        <example-component></example-component>
+        <board-component></board-component>
      </div>
      <input type="hidden" id="columns" value="{{ json_encode($columns) }}">
      <input type="hidden" id="boardId" value="{{$boardId}}">
      <input type="hidden" id="store-url" value="{{ route('user.board.store') }}">
+     <input type="hidden" id="dump-sql-url" value="{{ route('user.board.dump-sql') }}">
 
     <script src="{{ mix('/js/app.js') }}"></script>
 </body>

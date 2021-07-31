@@ -1,9 +1,19 @@
+.dump-container {
+  width: 100%;
+  height: 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.dump-container a {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   min-width: 100%;
   min-height: 100vh;
-  background: red;
   justify-content: flex-start;
   align-items: flex-start;
   overflow-x: scroll;
