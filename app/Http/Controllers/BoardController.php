@@ -63,7 +63,7 @@ class BoardController extends Controller
                 ->setDbName($databaseName)
                 ->setUserName($userName)
                 ->setPassword($password)
-                ->excludeTables(['migrations'])
+                // ->excludeTables(['migrations'])
                 ->dumpToFile($fileName);
             return response()->download($fileName)->deleteFileAfterSend(true);
         }catch(Exception $error){
